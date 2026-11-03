@@ -8,7 +8,10 @@ struct spinlock;
 struct sleeplock;
 struct stat;
 struct superblock;
+struct sysinfo;
 
+int collect_file_info(struct sysinfo *info);
+int collect_process_info(struct sysinfo *info);
 // bio.c
 void            binit(void);
 struct buf*     bread(uint, uint);
